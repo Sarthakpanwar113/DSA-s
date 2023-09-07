@@ -1,20 +1,25 @@
 #include<iostream>
 using namespace std;
 
-int primeToN(int N){
-    for(int i=2; i<N; i++){
-        if(N%i == 0){
-        return false;
-        
+bool checkPrime(int n){
+    int i=2;
+    for(i=2;i<n;i++){
+        if(n%i==0){
+            return false;
         }
         
+        }
+        return true;
     }
-    
-    
-}
+
 
 int main(){
-    int a= primeToN(9);
-    cout<<a;
-    return 0;
+    int n;
+    cin>>n;
+    for(int i=0; i<n; i++){
+        bool isPrime = checkPrime(i);
+        if(isPrime){
+            cout<<i<<" ";
+        }
+    }
 }
