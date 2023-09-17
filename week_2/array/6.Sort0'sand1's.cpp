@@ -46,35 +46,45 @@
 //     }
 // }
 
-
-
-// two pointer approch 
-#include<iostream>
+// two pointer approch
+#include <iostream>
 using namespace std;
 
-void sortallzeroandone(int arr[], int n){
+void sortallzeroandone(int arr[], int n)
+{
     int start = 0;
-    int end = n-1;
-    while(start<end){
-        if(arr[start]==0){
+    int end = n - 1;
+    while (start < end)
+    {
+        if (arr[start] == 0)
+        {
             start++;
         }
-        else if(arr[end]==1){
+        else if (arr[end] == 1)
+        {
             end--;
         }
-        else{
-        swap(arr[start], arr[end]);
-        start++;
-        end--;
+        else
+        {
+            swap(arr[start], arr[end]);
+            start++;
+            end--;
+        }
+    }
 }
-    }    
 
-}
+int main()
+{
 
-int main(){
-    
     int arr[] = {0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1};
     int n = 12;
     sortallzeroandone(arr, n);
-    cout<<sortallzeroandone;
+    // cout << sortallzeroandone;
+     // Print the sorted array
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    
+    return 0;
 }
